@@ -30,7 +30,8 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.number').textContent = number;
     document.querySelector('.message').textContent = 'o/ Correct Number!';
     if (score > highScore) {
-      document.querySelector('.highscore').textContent = score;
+      highScore = score;
+      document.querySelector('.highscore').textContent = highScore;
     }
   } else {
     if (score === 0) {
@@ -53,4 +54,6 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.number').style.width = '15rem';
   document.querySelector('.number').textContent = '?';
   document.querySelector('.message').textContent = 'Start guessing...';
+  document.querySelector('.guess').value = '';
+  document.querySelector('.score').textContent = score;
 });
